@@ -1,3 +1,24 @@
 ---
 layout: default
 ---
+
+
+<style type="text/css">
+    {% for page in site.journal %}
+    a.pageTitle:hover {
+        background-color: black;
+        color: white;
+    }
+    {% endfor %}
+
+</style>
+
+
+<div class="journalWrapper">
+   
+    {% for page in site.journal %}
+        <a href="{{site.baseurl}}{{ page.url }}" class="pageTitle">
+            <h1>{{ page.title }}</h1>
+        </a>
+    {% endfor %}
+</div>
