@@ -4,4 +4,25 @@ layout: default
 
 {% include nav.html %}
 
-<p>hi projects</p>
+<style type="text/css">
+    {% for project in site.projects %}
+    a.projectTitle:hover {
+        background-color: black;
+        color: white;
+    }
+    {% endfor %}
+
+</style>
+
+
+
+<div class="projectsWrapper">
+    {% for project in site.projects %}
+        <a href="{{site.baseurl}}{{project.url}}" class="projectTitle">   
+            <h3> {{project.projectTitle}}</h3>
+            <small>{{project.category}}</small>
+            <small>{{project.projectYear}}</small>
+        </a>
+    {% endfor %}
+
+</div>

@@ -3,7 +3,9 @@
 <head>
     {% include head.html %}
     <body>
-        
+        {% if page.url != '/' %}
+        {% include nav.html %}
+        {% endif %}
         {{content}}
     </body>
 </head>
