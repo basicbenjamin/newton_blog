@@ -1,0 +1,57 @@
+---
+layout: default
+---
+
+
+<div class="journalbody">
+<div class="journalPreview">
+    <h1>Journal preview</h1>
+    ghgj
+    {{content}}
+</div>
+
+<section class="archives" itemscope itemtype="http://schema.org/Blog">
+    <a class="nav nav--black" href="{{ site.baseurl }}/">
+      <i class="fa fa-lg fa-arrow-left"></i>
+      <span>Back to Posts</span>
+    </a>
+
+{% for post in site.reads %}
+
+        {% if post.category == page.category %}
+
+        <li class="preview" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+            <article>
+              <a class="preview__link" href="{{ post.url | prepend: site.baseurl }}" itemprop="url">
+                <span class="preview__date" itemprop="datePublished">{{ post.postdate | date: "%b %-d, %Y" }}</span>
+                <h2 class="preview__header" itemprop="name">{{ post.title }}</h2>
+                <p class="preview__excerpt" itemprop="description">{{ post.content | strip_html | truncatewords: 30 }}</p>
+                <span class="preview__more">Read More</span>
+              </a>
+            </article>
+          </li>
+
+        {% endif %}
+  
+{% endfor %} 
+
+<!-- <div>
+    {% for post in site.reads %}
+        <a href="{{site.baseurl}}{{post.url}}" class="projectTitle">   
+            <h3> {{post.title}}</h3>
+            <small>{{post.postdate}}</small>
+            <small>{{post.category}}</small>
+        </a>
+    {% endfor %}
+</div> -->
+
+<!-- {% for post in site.reads %}
+    
+        {% if post.category == page.category %}
+            <h3>{{post.category}}</h3>
+        {% endif %}    
+    
+{% endfor %} -->
+
+</div>
+    
