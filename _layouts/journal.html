@@ -2,20 +2,19 @@
 layout: default
 ---
 
-
-<div class="journalbody">
+<section class="previews">
+<div class="previews__container">
 <div class="journalPreview">
+  
     <h1>Journal preview</h1>
-    ghgj
-    {{content}}
+    <h1>Welcome to {{page.title}}</h1>
+        ghgj
+        {{content}}
+</div>
 </div>
 
-<section class="archives" itemscope itemtype="http://schema.org/Blog">
-    <a class="nav nav--black" href="{{ site.baseurl }}/">
-      <i class="fa fa-lg fa-arrow-left"></i>
-      <span>Back to Posts</span>
-    </a>
-
+<div class="tab">
+  <ul>
 {% for post in site.reads %}
 
         {% if post.category == page.category %}
@@ -33,25 +32,11 @@ layout: default
 
         {% endif %}
   
-{% endfor %} 
-
-<!-- <div>
-    {% for post in site.reads %}
-        <a href="{{site.baseurl}}{{post.url}}" class="projectTitle">   
-            <h3> {{post.title}}</h3>
-            <small>{{post.postdate}}</small>
-            <small>{{post.category}}</small>
-        </a>
-    {% endfor %}
-</div> -->
-
-<!-- {% for post in site.reads %}
-    
-        {% if post.category == page.category %}
-            <h3>{{post.category}}</h3>
-        {% endif %}    
-    
-{% endfor %} -->
-
+{% endfor %}
+</ul> 
 </div>
+
+
+
+</section>
     

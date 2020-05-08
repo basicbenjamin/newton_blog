@@ -1,0 +1,120 @@
+$font-header: 'Space Mono', monospace;
+$font-body: 'Inconsolata', monospace;
+$font-post: 'Lora', serif;
+
+$color-alpha: #9f8f68;
+$color-alpha--light: #f5f3ef;
+
+$color-black: #0a0a0a;
+$color-grey: #f8f9f9;
+$color-white: #fff;
+
+$mq-xs: 20em;
+$mq-sm: 30em;
+$mq-md: 54em;
+$mq-lg: 64em;
+$mq-xl: 76.5em;
+$mq-xxl: 114em;
+
+
+.previews{
+    display: flex
+}
+
+.tab {
+    position: relative;
+    width: 50%;
+    left: 50%;
+    top: 50px;
+    
+
+    &.active {
+      will-change: opacity;
+      animation: fade-in 1s both;
+    }
+  
+    ul {
+      list-style-type: none;
+    }
+  }
+
+  .previews {
+      
+
+    &__container {
+      display: flex;
+      flex-direction: column;
+      align-items: left;
+      justify-content: center;
+      height: 100%;
+      width: 45%;
+      padding: 2em;
+      padding-bottom: 0em;
+      margin-left: 2em;
+      margin-bottom: 0em;
+      position: absolute;
+      border-right: 1px solid black;  
+      color: black;
+  
+      span {
+        // @extend letter-spacing;
+  
+        font-family: $font-body;
+      }
+    }
+  }
+
+  .preview {
+    transition: background-color 0.2s ease-in-out;
+    
+    &:nth-child(even) {
+      background-color: $color-white;
+    }
+  
+    &:hover {
+      background-color: $color-alpha--light;
+  
+      .preview__more {
+        box-shadow: inset 175px 0 0 0 $color-alpha;
+        color: $color-white;
+      }
+    }
+  
+    &__img {
+      will-change: opacity;
+      animation: fade-in 1s both;
+    }
+  
+    &__link {
+      display: block;
+      padding: 2em 1em;
+  
+      @media (min-width: $mq-md) {
+        padding: 4em 8em;
+      }
+  
+      @media (min-width: $mq-xxl) {
+        padding-left: 10em;
+        padding-right: 10em;
+      }
+    }
+  
+    &__date {
+      font-family: $font-header;
+      color: $color-black;
+    }
+  
+    &__header {
+      color: $color-alpha;
+  
+      margin-bottom: 0.5em;
+    }
+  
+    &__excerpt {
+      color: $color-black;
+    }
+  
+    // &__more {
+    // //   @include button-slide();
+    // }
+  }
