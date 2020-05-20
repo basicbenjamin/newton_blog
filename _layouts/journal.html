@@ -1,0 +1,30 @@
+---
+layout: default
+---
+
+<div class=sidebar>
+  <h3>This is the preview page</h3>
+</div>
+
+<div class="journalHeader">
+  <div class="post-card">
+    <br> 
+    
+      {% for post in site.reads %}
+        {% if post.category == page.category %}
+      <ul class="postList">
+        <li style="border-top: 1px solid black;">
+          
+          <a href="{{site.baseurl}}{{post.url}}" class="articleLink"> 
+            <span>{{ post.postdate | date: "%b %-d, %Y" }}</span> 
+            <h3> {{post.title}}</h3>
+          <br>
+          <small>{{ post.content | strip_html | truncatewords: 30 }}</small>
+        </a>
+        </li>
+      </ul>
+        {% endif %}
+      {% endfor %}
+  </div>
+
+</div>

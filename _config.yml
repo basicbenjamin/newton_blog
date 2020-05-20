@@ -10,10 +10,13 @@ url: "https://basicbenjamin.github.io/" # the base hostname & protocol for your 
 twitter_username: basicbenjamin
 github_username:  basicbenjamin
 
+
+
 # Build settings
 permalink: pretty
 plugins:
   - jekyll-feed
+  
 
 
 
@@ -25,7 +28,10 @@ collections:
     output: true
   journal: 
     output: true
-    
+  reads:
+    output: true
+  
+
 
 
 
