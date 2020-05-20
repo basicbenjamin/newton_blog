@@ -2,41 +2,29 @@
 layout: default
 ---
 
-<section class="previews">
-<div class="previews__container">
-<div class="journalPreview">
-  
-    <h1>Journal preview</h1>
-    <h1>Welcome to {{page.title}}</h1>
-        ghgj
-        {{content}}
-</div>
+<div class=sidebar>
+  <h3>This is the preview page</h3>
 </div>
 
-<div class="tab">
-  <ul>
-{% for post in site.reads %}
-
-        {% if post.category == page.category %}
-
-        <li class="preview" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
-            <article>
-              <a class="preview__link" href="{{ post.url | prepend: site.baseurl }}" itemprop="url">
-                <span class="preview__date" itemprop="datePublished">{{ post.postdate | date: "%b %-d, %Y" }}</span>
-                <h2 class="preview__header" itemprop="name">{{ post.title }}</h2>
-                <p class="preview__excerpt" itemprop="description">{{ post.content | strip_html | truncatewords: 30 }}</p>
-                <span class="preview__more">Read More</span>
-              </a>
-            </article>
-          </li>
-
-        {% endif %}
-  
-{% endfor %}
-</ul> 
-</div>
-
-
-
-</section>
+<div class="journalHeader">
+  <div class="post-card">
+    <br> 
     
+      {% for post in site.reads %}
+        {% if post.category == page.category %}
+      <ul class="postList">
+        <li style="border-top: 1px solid black;">
+          
+          <a href="{{site.baseurl}}{{post.url}}" class="articleLink"> 
+            <span>{{ post.postdate | date: "%b %-d, %Y" }}</span> 
+            <h3> {{post.title}}</h3>
+          <br>
+          <small>{{ post.content | strip_html | truncatewords: 30 }}</small>
+        </a>
+        </li>
+      </ul>
+        {% endif %}
+      {% endfor %}
+  </div>
+
+</div>
