@@ -2,12 +2,30 @@
 layout: default
 ---
 
-<div class=sidebar>
-  <h3>This is the preview page</h3>
+<div class="catalogue">
+  {% for post in site.reads %}
+  {% if post.category == page.category %}
+    <a href="{{site.baseurl}}{{post.url}}" class="catalogue-item">
+      <div>
+        <time datetime="{{ post.postdate }}" class="catalogue-time">{{ post.postdate | date: "%B %d, %Y" }}</time>
+        <h1 class="catalogue-title">{{ post.title }}</h1>
+        <div class="catalogue-line"></div>
+
+        <p>
+          {{ post.content | strip_html | truncatewords: 30 }}
+        </p>
+
+      </div>
+    </a>
+    {% endif %}
+  {% endfor %}
 </div>
 
-<div class="journalHeader">
-  <div class="post-card">
+
+
+
+
+<!-- <div class="post-card">
     <br> 
     
       {% for post in site.reads %}
@@ -27,4 +45,4 @@ layout: default
       {% endfor %}
   </div>
 
-</div>
+</div> -->
