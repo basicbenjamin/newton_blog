@@ -1,3 +1,37 @@
 ---
 layout: default
 ---
+
+<body>
+    <!-- Control buttons -->
+ <div id="myBtnContainer">
+     <button class="btn active" onclick="filterSelection('all')"><span class="dot"></span> All</button>
+     <button class="btn arts" onclick="filterSelection('arts')"><span class="dot"></span>The Arts</button>
+     <button class="btn sciences" onclick="filterSelection('sciences')"><span class="dot"></span>The Sciences</button>
+     <button class="btn business" onclick="filterSelection('business')"><span class="dot"></span>Business</button>
+     <button class="btn misc" onclick="filterSelection('misc')"><span class="dot"></span>Misc</button>
+   </div>
+   
+   <!-- The filterable elements. Note that some have multiple class names (this can be used if they belong to multiple categories) -->
+   <div class="weblinkContainer">
+    <a target="_blank" href="https://getpocket.com/explore/item/slow-thought-a-manifesto" class="filterDiv arts"><span class="dot"></span>Slow Thought: A Manifesto</a>  
+    <a target="_blank" href="https://www.huffingtonpost.in/entry/clearview-ai-facial-recognition-alt-right_n_5e7d028bc5b6cb08a92a5c48?ri18n=true" class="filterDiv sciences"><span class="dot"></span>The Far-Right Helped Create The World's Most Powerful Facial Recognition Technology</a>
+    <a target="_blank" href="https://www.cbinsights.com/research/5g-next-gen-wireless-system/" class="filterDiv sciences"><span class="dot"></span>What Is 5G? Understanding The Next-Gen Wireless System Set To Enable Our Connected Future</a>
+
+    <a target="_blank" href="https://www.youtube.com/watch?v=JwApFGwMIMQ" class="filterDiv arts"><span class="dot"></span>How This Chair Conquered the World</a>
+    <a target="_blank" href="https://www.nytimes.com/2020/04/29/sunday-review/zoom-video-conference.html" class="filterDiv business"><span class="dot"></span>Why Zoom Is Terrible</a>
+    <a target="_blank" href="https://www.nytimes.com/2016/05/29/opinion/sunday/why-you-will-marry-the-wrong-person.html" class="filterDiv arts"><span class="dot"></span>Why You Will Marry the Wrong Person</a>
+    <a target="_blank" href="https://qz.com/488851/buying-organic-veggies-at-the-supermarket-is-basically-a-waste-of-money/" class="filterDiv business"><span class="dot"></span>Buying organic veggies at the supermarket is a waste of money</a>
+    <a target="_blank" href="https://getpocket.com/explore/item/hallucinations-are-everywhere" class="filterDiv arts"><span class="dot"></span>Hallucinations Are Everywhere</a>
+    <a target="_blank" href="https://www.vox.com/2015/5/1/8518455/extreme-early-retirement" class="filterDiv business"><span class="dot"></span>How to retire in your 30s: save most of your money and rethink your core values</a>
+    <a target="_blank" href="https://hbr.org/2013/05/the-unexpected-antidote-to-pro" class="filterDiv misc"><span class="dot"></span>The Unexpected Antidote to Procrastination</a>
+    <a target="_blank" href="https://www.eater.com/drinks/2015/8/13/9113965/whiskey-guide" class="filterDiv misc"><span class="dot"></span>An Absurdly Complete Guide to Understanding Whiskey</a>
+    <a target="_blank" href="https://www.brainpickings.org/2020/05/17/yes-to-life-in-spite-of-everything-viktor-frankl/" class="filterDiv arts"><span class="dot"></span>Yes to Life, in Spite of Everything: Viktor Frankl’s Lost Lectures on Moving Beyond Optimism and Pessimism to Find the Deepest Source of Meaning</a>
+    <a target="_blank" href="https://www.buzzfeednews.com/article/annehelenpetersen/recession-unemployment-covid-19-economy-consumer-spending" class="filterDiv business"><span class="dot"></span>I don't feel like buying stuff anymore.</a>
+    <a target="_blank" href="https://www.vox.com/2016/3/28/11318640/terrorism-threat-hype" class="filterDiv misc"><span class="dot"></span>Why we think terrorism is scarier than it really is</a>
+    <a target="_blank" href="https://hbr.org/2014/07/dont-sell-a-product-sell-a-whole-new-way-of-thinking" class="filterDiv business"><span class="dot"></span>Don’t Sell a Product, Sell a Whole New Way of Thinking</a>
+     
+     
+   </div>
+   <script src="{{site.baseurl}}/assets/js/weblink.js"></script>
+</body> 
