@@ -1,9 +1,9 @@
 ---
 layout: default
 ---
+<!-- include below code once I have a lot of articles -->
 
-
-<style type="text/css">
+<!-- <style type="text/css">
     {% for page in site.journal %}
     a.pageTitle:hover {
         background-color: black;
@@ -11,14 +11,36 @@ layout: default
     }
     {% endfor %}
 
-</style>
+</style> 
 
 
-<div class="journalWrapper">
+ <div class="journalWrapper">
    
     {% for page in site.journal %}
         <a href="{{site.baseurl}}{{ page.url }}" class="pageTitle">
             <h1>{{ page.title }}</h1>
         </a>
     {% endfor %}
-</div>
+</div> -->
+
+
+
+<div class="catalogue">
+    {% for post in site.reads %}
+    
+      <a href="{{site.baseurl}}{{post.url}}" class="catalogue-item">
+        <div>
+          <time datetime="{{ post.postdate }}" class="catalogue-time">{{ post.postdate | date: "%B %d, %Y" }}</time>
+          <h1 class="catalogue-title">{{ post.title }}</h1>
+          <div class="catalogue-line"></div>
+  
+          <p>
+            {{ post.summary | strip_html | truncatewords: 30 }}
+          </p>
+  
+        </div>
+      </a>
+      
+    {% endfor %}
+  </div>
+  

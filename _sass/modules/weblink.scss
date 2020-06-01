@@ -1,3 +1,9 @@
+
+
+
+
+
+
 .weblinkContainer {
 position: relative;
 overflow: hidden;
@@ -42,7 +48,6 @@ display: block;
 /* Style the buttons */
 .btn {
 border: none;
-// outline: 1px solid;
 padding: 8px 5px;
 background-color: white;
 cursor: pointer;
@@ -52,9 +57,9 @@ font-weight: 300;
 
 }
 
-/* Add a light grey background on mouse-over */
+// hover effects
 .btn:hover {
-background-color: #ddd;
+transform: scale(1.06);
 }
 
 
@@ -69,30 +74,31 @@ a{
     overflow: hidden;
     white-space: nowrap;
 }
+
 .dot{
     height: 9px;
     width: 9px;
-    background-color: rgb(66, 24, 24);
+    background-color: $dot;
     border-radius: 50%;
     display: inline-block;
     margin-right: 10px;
 }
 
 
-
+// dot colours
 .arts
 .dot{
-    background-color: lawngreen;
+    background-color: $arts;
 }
 .sciences
 .dot{
-    background-color: palevioletred;
+    background-color: $sciences;
 }
 .misc
 .dot{
-    background-color: cadetblue;
+    background-color: $misc;
 }
 .business
 .dot{
-    background-color: #F9805A;
+    background-color: $business;
 }

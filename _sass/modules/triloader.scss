@@ -1,5 +1,5 @@
 .loader {
-    --path: #2F3545;
+    --path: black;
     --dot: #5628EE;
     --duration: 3s;
     width: 35px;
@@ -30,11 +30,13 @@
             stroke-width: 4px;
             stroke-linejoin: round;
             stroke-linecap: round;
+            
         }
         polygon {
             stroke-dasharray: 145 (221 - 145) 145 (221 - 145);
             stroke-dashoffset: 0;
             animation: pathTriangle var(--duration) cubic-bezier(0.785, 0.135, 0.15, 0.86) infinite;
+            
         }
         rect {
             stroke-dasharray: (256 / 4 * 3) (256 / 4) (256 / 4 * 3) (256 / 4);
