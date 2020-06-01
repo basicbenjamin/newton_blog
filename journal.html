@@ -26,7 +26,7 @@ layout: default
 
 
 <div class="catalogue">
-    {% for post in site.reads %}
+    {% for post in site.reads  reversed %}
     
       <a href="{{site.baseurl}}{{post.url}}" class="catalogue-item">
         <div>
