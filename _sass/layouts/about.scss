@@ -1,0 +1,21 @@
+.resumeName{
+    position: fixed;
+    top: 50%;
+    left: 210px;
+}
+
+.resumeContent{
+    position: fixed;
+    top: 45%;
+    width: 30%;
+    left: 700px;
+}
+
+.resumeDivider{
+    content: "";
+    position: fixed;
+    height: 1px;
+    top: 50%;
+    left: 200px;
+    background: black;
+}
