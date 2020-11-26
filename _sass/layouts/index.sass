@@ -1,86 +1,196 @@
 .homeWrapper
     position: relative
-    width: 100vw
-    height: 80vh
-    padding: 0px 100px
-    box-sizing: border-box
-    background: $white
-    display: grid
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr
-    grid-auto-columns: 50px 
-
-    &::before
-        content: ""
-        position: fixed
-        height: 1px
-        left: 100px
-        right: 100px 
-        // grid-row: 7
-        top: calc(48.5%)
-
-        background: $black   
-
-.indexHeader
-    grid-column-start: 1
-    grid-column-end: 3
-    grid-row-start: 6
-    margin: 67px 0 0 0
-    h1
-        font-size: 1.5em
-        font-family: 'Montserrat', sans-serif
-        font-weight: 100
-        
-        
-    
-
-
-.triloader
-    position: relative
-    float: right
-    margin: -37px -45px 15px 20px
-
-
-
-
-
-// svg.tea
-//     position: relative
-//     float: right
-    
-//     margin: -9px 75px 0px 0px        
-
-.indexNavigation
-    grid-column-start: 7
-    grid-column-end: 7
-    grid-row-start: 6
-    margin: 20em 0 0 0
-    list-style: none
-    font-size: 5px
+    height: 100%
     
     
-    li
-        margin-top: 14px
-        a
-            font-size: 1.14rem
+.homeHeader
+    position: fixed
+    margin: 0
+    top: calc(45%) 
+    left: 120px 
+    header
+        h1
+            font-size: 1.6em
+            margin: 0
+            font-family: 'Montserrat', sans-serif
+            
+            
+            
+        &::after
+            content: ""
+            position: fixed
+            height: 1px
+            left: 120px
+            right: 120px
+            background: black
+
+
+.homeNavigation
+     position: fixed
+     float: right
+     margin: 0
+     padding: 0
+     top: calc(48%)
+     right: 15em
+     li
+         list-style: none
+         margin-top: 10px
+         a
+            font-size: 1.24rem
             font-weight: normal
             text-decoration: none
             color: black
-        a:link
+            a:link
             text-decoration: none
-        a:visited
+            a:visited
             text-decoration: none
+
+.triloader
+    position: fixed
+    margin-top: 5px 
+    padding: 0
+    top: 45%
+    left: 340px
+    
+    
+    
+    
+    
+    
+    
+    
+    
+//     .homeWrapper
+//     // position: relative
+//     // // width: 100vw
+//     // height: 80em
+//     padding: 10px 10px
+//     // box-sizing: border-box
+//     background: $white
+//     // display: grid
+//     // grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr
+//     // grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr
+//     // grid-auto-columns: 50px 
+
+//     &::before
+//         content: ""
+//         position: fixed
+//         height: 1px
+//         left: 100px
+//         right: 100px 
+//         // grid-row: 7
+//         top: calc(50%)
+
+//         background: $black   
+
+// .mainTriloader
+//     position: relative
+//     left: 00px
+//     float: right  
+//     margin: 10px 10px 10px 50px
+//     color: black
+
+
+
+
+// .indexHeader
+//     // grid-column-start: 1
+//     // grid-column-end: 3
+//     // grid-row-start: 6
+//     margin: 0px 0px 0px 80px
+//     padding: 0 0px 0px 0
+//     position: fixed
+//     top: calc(42%)
+//     float: left
+//     border: 1px solid
+    
+//     h1
+//         font-size: 1.5em
+//         font-family: 'Montserrat', sans-serif
+//         font-weight: 100
+        
+    
+        
+        
+    
+
+
+
+    
+
+
+
+
+
+// // svg.tea
+// //     position: relative
+// //     float: right
+    
+// //     margin: -9px 75px 0px 0px        
+
+// .indexNavigation
+//     // grid-column-start: 7
+//     // grid-column-end: 7
+//     // grid-row-start: 6
+//     margin: 0em 10px 0 0px
+//     list-style: none
+//     font-size: 5px
+//     position: relative
+//     float: right
+//     border: 1px solid
+    
+    
+//     li
+//         margin-top: 1px
+//         a
+//             font-size: 1.14rem
+//             font-weight: normal
+//             text-decoration: none
+//             color: black
+//         a:link
+//             text-decoration: none
+//         a:visited
+//             text-decoration: none
             
 
-// .circle
-//     height: 100%
-//     width: 20px
-//     border: 1px solid $black
-//     border-radius: 100%
-//     grid-column-start: 3
-//     grid-row-start: 1
-//     grid-row-end: 8
+// @media screen and(max-width: 875px)
+//   .homeWrapper
+//     padding: 40px 50px
 
+    
+
+// @media screen and(max-width: 800px)
+//   .homeWrapper
+//     position: relative
+//     width: 100vw
+//     height: 100vh
+//     padding: 30px 16px
+//     box-sizing: border-box
+//     display: grid
+//     grid-template-columns: 1fr 1fr 1fr 1fr 1fr
+//     grid-template-rows: 1fr 1fr 1fr 1fr
+//     .indexNavigation, footer
+//       grid-column-start: 4
+//     &::before
+//       grid-column-end: 6
+
+
+// @media screen and(max-width: 600px)
+//   .homeWrapper
+//     position: relative
+//     width: 100vw
+//     height: 100vh
+//     padding: 30px 16px
+//     box-sizing: border-box
+//     display: grid
+//     grid-template-columns: 1fr 1fr 1fr 1fr 1fr
+//     grid-template-rows: 1fr 1fr 1fr 1fr
+//     .indexTagline
+//       display: none
+//     .indexTitle, .indexNavigation, footer
+//       grid-column-start: 1
+//     &::before
+//       grid-column-end: 6
             
 
    

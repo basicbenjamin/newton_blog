@@ -1,6 +1,12 @@
 
 
-
+.inspire-description{
+    position: relative;
+    color: $grey;
+    margin-left: 90px;
+    width: 30%;
+    top: 300px;
+}
 
 
 
@@ -9,11 +15,12 @@ position: relative;
 overflow: hidden;
 width: 50%;
 float: right;
-margin-top: 80px;
+margin-top: 20px;
 right: 0px;
 font-family: $inspire;
 margin-right: 0px;
 text-overflow: ellipsis;
+
 
 }
 #myBtnContainer{
@@ -36,6 +43,7 @@ height: 50px;
 line-height: 50px;
 margin: 0px;
 font-family: $inspire;
+color: $grey;
 font-size: 15px;
 display: none; /* Hidden by default */
 }
@@ -66,7 +74,7 @@ transform: scale(1.06);
 
 .weblinkContainer
 a{
-    color:black;
+    color: $grey;
     text-decoration: none;
     font-family: $inspire;
     text-overflow: ellipsis;
@@ -75,6 +83,9 @@ a{
     white-space: nowrap;
 }
 
+a:hover{
+    transform: scale(1.01);
+}
 .dot{
     height: 9px;
     width: 9px;
