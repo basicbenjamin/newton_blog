@@ -50,7 +50,33 @@
     left: 340px
     
     
+@media screen and ( max-width:420px)
+    .homeHeader
+        position: fixed
+        top: calc(  40%  )
+        left: calc( 30%   )
+        header
+            h1
+                font-size: 1.5em
+            &::after
+                content: ""
+                position: fixed
+                height: 1px
+                left: 25%
+                right: 15%
+                background: black  
     
+    .homeNavigation
+        position: fixed
+        top: calc(  45%  )
+        left: calc( 30% ) 
+
+    .triloader
+        visibility: hidden
+        position: relative
+        top: 10%
+        left: 10%
+        
     
     
     
