@@ -56,7 +56,7 @@
   left: 340px;
 }
 
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 500px) {
   .homeHeader {
     position: fixed;
     top: calc( 40% );
