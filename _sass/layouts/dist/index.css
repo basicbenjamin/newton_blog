@@ -1,0 +1,89 @@
+.homeWrapper {
+  position: relative;
+  height: 100%;
+}
+
+.homeHeader {
+  position: fixed;
+  margin: 0;
+  top: calc(45%);
+  left: 120px;
+}
+.homeHeader header h1 {
+  font-size: 1.6em;
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+}
+.homeHeader header::after {
+  content: "";
+  position: fixed;
+  height: 1px;
+  left: 120px;
+  right: 120px;
+  background: black;
+}
+
+.homeNavigation {
+  position: fixed;
+  float: right;
+  margin: 0;
+  padding: 0;
+  top: calc(48%);
+  right: 15em;
+}
+.homeNavigation li {
+  list-style: none;
+  margin-top: 10px;
+}
+.homeNavigation li a {
+  font-size: 1.24rem;
+  font-weight: normal;
+  text-decoration: none;
+  color: black;
+}
+.homeNavigation li a a:link {
+  text-decoration: none;
+}
+.homeNavigation li a a:visited {
+  text-decoration: none;
+}
+
+.triloader {
+  position: fixed;
+  margin-top: 5px;
+  padding: 0;
+  top: 45%;
+  left: 340px;
+}
+
+@media screen and (max-width: 420px) {
+  .homeHeader {
+    position: fixed;
+    top: calc( 40% );
+    left: calc( 30% );
+  }
+  .homeHeader header h1 {
+    font-size: 1.5em;
+  }
+  .homeHeader header::after {
+    content: "";
+    position: fixed;
+    height: 1px;
+    left: 25%;
+    right: 15%;
+    background: black;
+  }
+
+  .homeNavigation {
+    position: fixed;
+    top: calc( 45% );
+    left: calc( 30% );
+  }
+
+  .triloader {
+    visibility: hidden;
+    position: relative;
+    top: 10%;
+    left: 10%;
+  }
+}
